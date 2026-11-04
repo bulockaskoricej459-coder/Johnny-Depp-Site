@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Джонні Депп</title>
+</head>
+
+<body>
+<header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Головна</a></li>
+            <li><a href="#reg">Форма реєстрації</a></li>
+            <li><a href="#log">Форма входу</a></li>
+            <li><a href="#feed">Форма зворотного зв'язку</a></li>
+            <li><a href="#post">Соцмережі</a></li>
+        </ul>
+    </nav>
+<main>
+    <section id="contact">
+        <h2>Контакти</h2>
+        <p>У 2018 році журналіст британського таблоїда Sun Ден Вуттон опублікував статтю, в якій назвав Джонні Деппа "людиною, яка б'є свою дружину". Юристи Sun стверджують, що у них немає сумнівів в тому, що актор систематично вдавався до насильства щодо дружини.</p>
+        <img src="images/ддд.jpg" alt="Джонні Депп." width="200" height="110">
+        <p>Але актор звинуватив таблоїд в наклепі і назвав твердження на свою адресу повною вигадкою. Герд, яка виступає в суді свідком, назвала Деппа некерованим монстром, який піддавав її життя небезпеці.</p>
+        <p>За словами актора, Ембер сама починала сварки, які закінчувалися насильством. На підтвердження цього суду надали аудіозапис, на якому Джонні Депп говорить колишній дружині, що та бреше, коли стверджує, що не намагалася вдарити його.</p>
+        <img src="images/розл.jpg" alt="Джонні Депп та Ембер Герд." width="200" height="110">
+        <p>"Ой, не розповідай мені, як це, коли тебе б'ють", - говорить на аудіозаписі Депп.</p>
+        <p>"Я штовхнула тебе ось так, але не вдарила", - відповідає Герд.</p>
+        <img src="images/бургер.jpg" alt="Джонні Депп з охороною." width="200" height="110">
+        <p>На думку адвоката кіноактора, слова акторки свідчать про її схильність до насильства. "Тільки уявіть, що б було, якби це сказав Джонні Депп, який би це викликало жах?" - прокоментував аудіозапис Джон Шеборн.</p>
+    </section>
+
+    <section id="animation">
+        <img src="images/звірі.jpg" alt="Джонні Депп у фільмі 'Фантастичні звірі і де їх шукати'." width="200" height="300" class="cards">
+        <img src="images/чарівна.jpg" alt="Джонні Депп у фільмі 'Чарівна країна'." width="200" height="300" class="cards">
+        <img src="images/тіні.jpg" alt="Джонні Депп у фільмі 'Похмурі Тіні'." width="200" height="300" class="cards">
+    </section>
+
+<form id="reg" action="/submit" method="POST" enctype="multipart/form-data">
+    <fieldset>
+        <legend>Форма реєстрації</legend>
+        <label for="avatar">Фото профілю:</label>
+        <input type="file" id="avatar" name="avatar" accept="image/*">
+        <label for="username">Ім'я користувача:</label>
+        <input type="text" id="username" name="username" placeholder="Введіть ваше ім'я" required>
+        <label for="lastname">Призвіще:</label>
+        <input type="text" id="lastname" name="lastname" placeholder="Введіть ваше призвіще" required>
+        <legend>Оберіть стать:</legend>
+        <input type="radio" id="male" name="gender" value="male" required>
+        <label for="male">Чоловік</label><br>
+        <input type="radio" id="female" name="gender" value="female" required>
+        <label for="female">Жінка</label><br>
+        <label for="age">Вік:</label>
+        <input type="number" id="age" name="age" min="1" max="120" placeholder="Введіть ваш вік" required>
+        <label for="birthday">Дата народження:</label>
+        <input type="date" id="birthday" name="birthday" min="1920-01-01" max="2020-12-31" placeholder="Виберіть дату народження" required>
+        <label for="country">Країна:</label>
+        <select id="country" name="country" required>
+            <option value="">Оберіть країну</option>
+            <option value="ukraine">Україна</option>
+            <option value="usa">США</option>
+            <option value="uk">Великобританія</option>
+            <option value="germany">Німеччина</option>
+            <option value="france">Франція</option>
+            <option value="japan">Японія</option>
+            <option value="china">Китай</option>
+            <option value="south_korea">Південна Корея</option>
+            <option value="norway">Норвегія</option>
+        </select>
+        <label for="phone">Номер телефону:</label>
+        <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" placeholder="ХХХХХХХХХХХХ">
+        <label for="social_media">Соцмережі:</label>
+        <input type="text" id="social_media" name="social_media" placeholder="Посилання на соц.мережу">
+        <label for="email">Електронна пошта:</label>
+        <input type="email" id="email" name="email" placeholder="Ел.пошта" required>
+        <label for="password">Пароль:</label>
+        <input type="password" id="password" name="password" pattern=".{6,}" title="Пароль повинен містити принаймні 6 символів" placeholder="Пароль" required>
+        <input type="checkbox" id="terms" name="terms" required>
+        <label for="terms">Чи погоджується з умовами використання?</label>
+    <button type="submit">Зареєструватися</button>
+    <input type="reset" value="Відміна">
+    </fieldset>
+    
+</form>
+
+
+
+<form id="log" action="/submit" method="POST" enctype="multipart/form-data">
+    <fieldset>
+        <legend>Форма входу</legend>
+        <label for="login">Логін:</label>
+        <input type="login" id="login" name="login" placeholder="Введіть ваш логін" required>
+        <label for="password">Пароль:</label>
+        <input type="password" id="password" name="password" placeholder="Введіть ваш пароль" required>
+    <button type="submit">Вхід</button>
+    </fieldset>
+</form>
+
+
+<form id="feed" action="/submit" method="POST" enctype="multipart/form-data">
+    <fieldset>
+        <legend>Форма зворотного зв'язку</legend>
+        <label for="name">Ім'я:</label>
+        <input type="text" id="name" name="name" placeholder="Введіть ваше ім'я" required>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Введіть ваш email" required>
+        <label for="subject">Тема повідомлення:</label>
+        <select id="subject" name="subject">
+            <option value="">Тема повідомлення:</option>
+            <option value="general">Загальні питання</option>
+            <option value="complaint">Скарга</option>
+            <option value="suggestion">Пропозиції</option>
+        </select>
+        
+        <label for="message">Повідомлення:</label>
+        <textarea id="message" name="message" rows="5" cols="50" placeholder="Введіть ваше повідомлення" required></textarea>
+    <button type="submit">Відправити</button>
+    </fieldset>
+</form>
+
+    <section id="post">
+        <h2>Соцмережі</h2>
+        <a href="https://instagram.com/johnnydepp?exln=eTg5NDNuYzM5a3o3" target="_blank">
+        <img src="images/інста.jpg" alt="Інстаграм Джонні Деппа" width="50" height="50">
+        </a>
+        <a href="https://www.facebook.com/share/14pQf3nryHX/" target="_blank">
+            <img src="images/face.png" alt="Фейсбук Джонні Деппа" width="50" height="50">
+        </a>
+        <a href="https://www.tiktok.com/@johnnydepp?_r=1&_t=ZS-9AWlX9Z8QGy" target="_blank">
+            <img src="images/тікток.jpg" alt="Тікток Джонні Деппа" width="50" height="50">
+        </a>
+    </section>
+</main>
+</body>
+</html>
