@@ -322,17 +322,21 @@ textarea {
 
 
 
-/* =========================================
-   БАЗОВА АДАПТИВНІСТЬ (Гнучкі медіа, Grid, Flexbox)
-   ========================================= */
 
-/* 1. Гнучкі зображення (щоб жодна картинка не вилазила за екран) */
+
+
+
+
+
+
+
+
 img {
     max-width: 100%;
     height: auto;
 }
 
-/* 2. CSS GRID (мінімум 1 місце за вимогами лаби) — галерея фото */
+
 #photos {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -345,7 +349,7 @@ img {
     text-align: center;
 }
 
-/* 3. FLEXBOX (2-ге місце, окрім меню) — соцмережі в рядок по центру */
+
 #post {
     display: flex;
     flex-wrap: wrap;
@@ -355,34 +359,30 @@ img {
 }
 
 #post h2 {
-    width: 100%; /* щоб заголовок був над іконками */
+    width: 100%; 
 }
 
-/* Щоб форми могли стискатися, а не ламали екран */
+
 fieldset {
     max-width: 550px;
     width: 90%;
     box-sizing: border-box;
 }
 
-/* =========================================
-   МЕДІА-ЗАПИТИ (3 штуки за вимогами лаби)
-   ========================================= */
 
-/* МЕДІА-ЗАПИТ 1: Планшети (до 1024px) */
 @media (max-width: 1024px) {
     nav ul {
         gap: 15px;
     }
 
     nav li {
-        margin-left: 0; /* прибираємо зайвий відступ зліва */
+        margin-left: 0; 
     }
 }
 
-/* МЕДІА-ЗАПИТ 2: Смартфони (до 768px) */
+
 @media (max-width: 768px) {
-    /* Меню стає вертикальним і вміщується ідеально */
+  
     nav ul {
         flex-direction: column;
         align-items: center;
@@ -393,7 +393,7 @@ fieldset {
         margin-left: 0;
     }
 
-    /* Відклеюємо форму входу, щоб не налізала на текст і соцмережі */
+   
     #log {
         position: static;
         width: 90%;
@@ -401,7 +401,7 @@ fieldset {
         box-sizing: border-box;
     }
 
-    /* Залишаємо анімацію, але робимо картки компактнішими під екран телефону */
+  
     #animation {
         width: 140px;
         height: 210px;
@@ -411,10 +411,10 @@ fieldset {
     .cards {
         width: 140px;
         height: 210px;
-        object-fit: cover; /* щоб фото не сплющились */
+        object-fit: cover; 
     }
 
-    /* Зменшуємо розліт із 200px до 85px, щоб не виходили за межі екрана */
+  
     #animation:hover .cards:nth-child(1) {
         transform: translate(-85px, -10px) rotate(-15deg);
     }
@@ -424,9 +424,9 @@ fieldset {
     }
 }
 
-/* МЕДІА-ЗАПИТ 3: Маленькі смартфони (до 480px) */
+
 @media (max-width: 480px) {
-    /* Галерея фото в 1 колонку */
+    
     #photos {
         grid-template-columns: 1fr;
     }
@@ -441,7 +441,7 @@ fieldset {
         text-indent: 10px;
     }
 
-    /* Таблиця нагород, щоб не розтягувала сторінку вбік */
+   
     table {
         display: block;
         overflow-x: auto;
